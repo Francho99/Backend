@@ -1,22 +1,45 @@
 const fs = require('fs')
 
-
-const archivo = './archivo.txt'
+const leer = async (archivo) => {
+    try {
+        let resultado = await fs.promises.readFile(archivo, 'utf-8')
+        let obj = JSON.parse(resultado)
+        let id = obj.id
+    } catch (error) {
+        console.log(`Error: ${error}`)
+    }
+}
 
 class Contenedor{
     constructor(archivo){
         this.archivo = archivo
     }
 
-    save(obejto){
-        fs.appendFile
+    save(objeto){
+        try {
+            fs.appendFileSync(archivo, objetoconid)
+        } catch (err) {
+            throw new Error(`Error en el guardado: ${err.message}`)
+        }
     }
 
-    getById(){}
+    getById(id){}
 
-    getAll(){}
+    getAll(){
+        try {
+            fs.readFileSync(archivo).toString
+        } catch (err) {
+            throw new Error(`Error en la lectura: ${err.message}`)
+        }
+    }
 
-    deleteById(){}
+    deleteById(id){}
 
-    deleteAll(){}
+    deleteAll(){
+        try {
+            fs.writeFileSync(archivo, '')
+        } catch (err) {
+            throw new Error(`Error en el borrado: ${err.message}`)
+        }
+    }
 }
