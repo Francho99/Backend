@@ -1,15 +1,6 @@
 const { json } = require('express')
 const fs = require('fs')
 
-//const leer = async (archivo) => {
-//    try {
-//        let resultado = await fs.promises.readFile(archivo, 'utf-8')
-//        let obj = JSON.parse(resultado)
-//        let id = obj.id
-//    } catch (error) {
-//        console.log(`Error: ${error}`)
-//    }
-//}
 
 class Contenedor {
     constructor(nombrearchivo){
@@ -84,22 +75,6 @@ class Contenedor {
 
 const Container = new Contenedor('productos.txt')
 
-Container.save({
-    title: "Producto uno",
-    price: "$20",
-    thumnail: "algunaimagen.jpg"
-})
-Container.save({
-    title: "Producto dos",
-    price: "$30",
-    thumnail: "algunaotraimagen.jpg"
-})
-Container.save({
-    title: "Producto tres",
-    price: "$30",
-    thumnail: "algunaotraperootraimagen.jpg"
-})
-
 
 console.log(Container)
 
@@ -107,5 +82,5 @@ console.log(Container.getAll())
 
 console.log(Container.getById(1))
 
-
+export default Container;
 

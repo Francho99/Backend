@@ -1,0 +1,13 @@
+[
+{"title": "Producto uno", "price": "$20", "thumnail": "algunaimagen.jpg"},
+{
+    "title": "Producto dos",
+    "price": "$30",
+    "thumnail": "algunaotraimagen.jpg"
+},
+{
+    "title": "Producto tres",
+    "price": "$30",
+    "thumnail": "algunaotraperootraimagen.jpg"
+},
+]
